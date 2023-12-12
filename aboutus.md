@@ -17,4 +17,3 @@ Join us in celebrating the minds behind this project:
 - **Daniel Tavares**: The code maestro, turning algorithms into art.
 - **Anne-Laure Tettoni**: The creative force, blending data with storytelling.
 - **Romain Berquet**: The analytical thinker, unraveling data mysteries.
-assets/img/EPFL-vue-aerienne-1536x864.jpg
