@@ -1,16 +1,18 @@
 ---
 layout: page
-title: About us
-subtitle: Why you'd want to go on a date with me
+title: About the project
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+# Project Overview
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+Welcome to our GitHub page dedicated to the Applied Data Analysis (CS-401) project at EPFL. Our journey in this project involved selecting a unique dataset and conducting in-depth data analysis. Here, we're excited to share our discoveries and insights with you.
 
-What else do you need?
+# Meet the Data Freaks Team
 
-### My story
+Join us in celebrating the minds behind this project:
 
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+- **Robin Jaccard**: The strategic planner, guiding the project with precision.
+- **Jeremy Di Dio**: The data wizard, bringing complex numbers to life.
+- **Daniel Tavares**: The code maestro, turning algorithms into art.
+- **Anne-Laure Tettoni**: The creative force, blending data with storytelling.
+- **Romain Berquet**: The analytical thinker, unraveling data mysteries.

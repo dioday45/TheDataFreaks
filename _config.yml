@@ -20,8 +20,10 @@ author: The Data Freaks
 ###############################################
 
 navbar-links:
-  The Dataset: "https://snap.stanford.edu/data/wiki-RfA.html"
-  About us: aboutus
+  The Datasets: 
+    - Wikipedia RfA: "https://snap.stanford.edu/data/wiki-RfA.html"
+    - Wikipedia edit history: "https://snap.stanford.edu/data/wiki-meta.html"
+  About: aboutus
 #  About Me: "aboutme"
 #  Resources:
 #    - Beautiful Jekyll: "https://beautifuljekyll.com"
