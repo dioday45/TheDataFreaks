@@ -62,3 +62,29 @@ In our project, we focused on the Main Namespace Revisions and User Talk Page Ed
 ### Preprocessing
 
 Our analytical approach involved narrowing down the dataset to include interactions only between users present in the Wiki-RfA dataset. This filtering significantly reduced the dataset size, making it more manageable for our study. Subsequently, we created a new dataset capturing the number of interactions between each user pair, considering both direct communications on user talk pages and joint revisions of Wikipedia articles. This approach provided us with a comprehensive view of user interaction dynamics in the Wikipedia community.
+
+# Elections Dynamics
+
+Our dataset is not just a collection of numbers, it is a reflection of the motivations and actions of voters within the RfA process. As we want to delve into the intricacies of voting behavior in RfA Elections, let's first start with some foundational statistics about the elections and their outcome.
+
+First, we observe that a majority of votes are positive.
+
+<iframe src="assets/html/vote_percentage.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+
+How about the distribution of the number of votes ? Do people have a tendency to vote in every election or only sporadically ?
+
+![nb_votes_dist](assets/img/nb_votes_dist.png) 
+
+From the graph, we see a long-tail distribution of voter activity, indicating that a small number of people vote a lot, while most people only engage in the elections minimally.
+
+![duration_voting](assets/img/duration_voting.png)
+
+The plot of the duration between users’ first and last votes confirms that most people briefly participate in elections, while a minority stays active longer.
+
+Now, if we look at the ratio of positive votes by election outcome over time, we observe that there is a correlation between the two. Indeed, there seems to be a specific threshold for the percentage of positive votes for an election to be successful.
+
+![trends_ratio](assets/img/trends_ratio.png)
+
+As we wanted to have more information about these elections, we added additional datasets for our analysis. We added the Wikipedia edit of talk pages history dataset, that will enable us to consider interactions between users outside of the election process. We consider an interaction between two users as an edit from one user to another user’s talk page (a page used to discuss with other editors). This gives us the opportunity to link voters and candidates outside of the elections, to identify who has had interactions.
+
+The other dataset comprises the edits on different Wikipedia pages. From that, we can gather the pages edited by a user, to identify their centers of interest, and compare them with other users. If their interests are similar enough, we will consider that these users are part of the same community.
