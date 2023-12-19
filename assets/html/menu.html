@@ -1,8 +1,3 @@
----
-common-css:
-  - "/assets/css/bootstrap-social.css"
-  - "/assets/css/beautifuljekyll.css"
----
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +5,32 @@ common-css:
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Community Dropdown</title>
     <style>
-        /* Add your styles here */
+        body {
+  font-family: 'Lora', 'Times New Roman', serif;
+  font-size: 1.125rem;
+  color: {{ site.text-col | default: "#404040" }};
+text-align: center;
+        }
+
+        #communitySelect {
+            padding: 10px;
+            font-size: 16px;
+        }
+
         #wordList {
             display: none;
+            margin-top: 20px;
+        }
+
+        #associatedWords {
+            list-style: none;
+            padding: 0;
+        }
+
+        #associatedWords li {
+            margin-bottom: 5px;
         }
     </style>
-</head>
 <body>
 
     <label for="communitySelect">Select a Community:</label>
