@@ -88,3 +88,6 @@ Now, if we look at the ratio of positive votes by election outcome over time, we
 As we wanted to have more information about these elections, we added additional datasets for our analysis. We added the Wikipedia edit of talk pages history dataset, that will enable us to consider interactions between users outside of the election process. We consider an interaction between two users as an edit from one user to another user’s talk page (a page used to discuss with other editors). This gives us the opportunity to link voters and candidates outside of the elections, to identify who has had interactions.
 
 The other dataset comprises the edits on different Wikipedia pages. From that, we can gather the pages edited by a user, to identify their centers of interest, and compare them with other users. If their interests are similar enough, we will consider that these users are part of the same community.
+
+<iframe src="assets/html/menu.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+

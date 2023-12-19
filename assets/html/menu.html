@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Dropdown</title>
+    <style>
+        /* Add your styles here */
+        #wordList {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <label for="communitySelect">Select a Community:</label>
+    <select id="communitySelect" onchange="showWords()">
+        <!-- Add a default option -->
+        <option value="" disabled selected>Select a Community</option>
+        <option value="community0">Pop Culture Mix</option>
+        <option value="community1">Middle East & Religion</option>
+        <option value="community2">Varied Interests</option>
+        <option value="community3">USA Historical Figures</option>
+        <option value="community4">Australia</option>
+        <option value="community5">Religion Debates & Controversies</option>
+        <option value="community6">Controversial Pop Culture</option>
+        <option value="community7">Russia & Eastern Europe</option>
+        <option value="community8">USA & East Asia Mix</option>
+        <option value="community9">New Zealand</option>
+        <option value="community10">Military Aircraft</option>
+        <option value="community11">Youth Pop Culture</option>
+        <option value="community12">India & South Asia</option>
+        <option value="community13">Historical & Political Mix</option>
+        <option value="community14">People Mix</option>
+        <option value="community15">USA Varied Interest</option>
+        <option value="community16">Science</option>
+        <option value="community17">Historical Figures</option>
+        <option value="community18">UK & Ireland</option>
+        <option value="community19">TV Series 'Lost'</option>
+        <option value="community20">Sports</option>
+        <option value="community21">Scientology</option>
+        <option value="community22">Canada & Ice Hockey</option>
+        <option value="community23">Comics</option>
+        <option value="community24">Balkans & Central Asia</option>
+        <option value="community25">Chemical Elements</option>
+        <option value="community26">Wrestling</option>
+        <option value="community27">Oregon</option>
+        <option value="community28">Politics</option>
+    </select>
+
+    <div id="wordList">
+        <h3>Words Associated with the Selected Community:</h3>
+        <ul id="associatedWords">
+            <!-- Words associated with the selected community will be displayed here -->
+        </ul>
+    </div>
+
+    <script>
+        function showWords() {
+            // Get the selected community
+            var selectedCommunity = document.getElementById("communitySelect").value;
+
+            // Define the associated words for each community
+            var communityWords = {
+                community0: ["Britney_Spears", "George_W_Bush", "Wikipedia", "PlayStation_3", "United_States", "David_Beckham", "Wii", "Adolf_Hitler", "Paris_Hilton", "The_Beatles", "2006_FIFA_World_Cup", "24_(TV_series)", "Bill_Clinton", "Christina_Aguilera", "World_War_II", "Hurricane_Katrina", "Green_Day", "Family_Guy", "Xbox", "2006"],
+                community1: ["Muhammad", "Israel", "Jerusalem", "Islam", "2006_Lebanon_War", "The_Holocaust", "Jesus", "George_W_Bush", "Hezbollah", "Wikipedia", "Jyllands-Posten_Muhammad_cartoons_controversy", "Allegations_of_Israeli_apartheid", "Mahmoud_Ahmadinejad", "New_antisemitism", "Zionism", "Islamic_terrorism", "Antisemitism", "Judaism", "Hamas", "Qur_an"],
+                community2: ["Wikipedia", "Tom_Hanks", "Albert_Einstein", "Zeus", "Super_Smash_Bros._Brawl", "John_F_Kennedy", "Jimmy_Wales", "Bill_Gates", "Nerd", "The_Simpsons", "J_K_Rowling", "Bill_Clinton", "Cannabis_(drug)", "Martin_Luther_King,_Jr.", "Cheese", "Forrest_Gump_(film)", "Avril_Lavigne", "Guitar", "Ludwig_van_Beethoven", "Wii"],
+                community3: ["Wikipedia", "George_W_Bush", "World_War_II", "Adolf_Hitler", "Tom_Cruise", "Albert_Einstein", "Ronald_Reagan", "Cat", "Michael_Jackson", "United_States", "Dragon", "George_Washington", "Abraham_Lincoln", "Agriculture", "Statue_of_Liberty", "RuneScape", "Theodore_Roosevelt", "Rabbit", "Dog", "Gay"],
+                community4: ["Australia", "John_Howard", "Sydney", "Melbourne", "Indigenous_Australians", "Perth,_Western_Australia", "Australian_federal_election,_2007", "Peter_Costello", "Darwin,_Northern_Territory", "Kevin_Rudd", "Paul_Keating", "Wikipedia", "Adelaide", "Australian_Labor_Party", "Pauline_Hanson", "Brisbane", "Canberra", "Victoria_(Australia)", "Kim_Beazley", "Newcastle,_New_South_Wales"],
+                community5: ["Jesus", "Intelligent_design", "Christianity", "God", "Creationism", "Creation-evolution_controversy", "Evolution", "Atheism", "Adolf_Hitler", "The_Church_of_Jesus_Christ_of_Latter-day_Saints", "Human", "Pseudoscience", "Homeopathy", "Martin_Luther", "List_of_pseudosciences_and_pseudoscientific_concepts", "Bible", "Abortion", "Creation_science", "Jesus_myth_hypothesis", "Wikipedia"],
+                community6: ["George_W_Bush", "Wikipedia", "United_States", "Michael_Jackson", "Adolf_Hitler", "Britney_Spears", "Jesus", "Bill_Gates", "Hurricane_Katrina", "Osama_bin_Laden", "Bill_Clinton", "George_Washington", "RuneScape", "Gay", "World_War_II", "Dog", "Wiki", "Harry_Potter", "George_H_W_Bush", "Nigger"],
+                community7: ["Russia", "Joseph_Stalin", "Kiev", "World_War_II", "Ukraine", "Józef_Piłsudski", "Russia_military_intervention_in_Ukraine_(2014–present)", "Joseph_McCarthy", "Vladimir_Putin", "Poland", "Wikipedia", "Russian_language", "Russian_Revolution", "Ukrainian_Soviet_Socialist_Republic", "Chechnya", "Red_Army", "Leon_Trotsky", "Cold_War", "Adolf_Hitler", "Krasnoyarsk"],
+                community8: ["United_States", "China", "Wikipedia", "Japan", "Korea", "Russia", "North_Korea", "George_W_Bush", "Barack_Obama", "Iraq", "China_economics", "Vietnam_War", "World_War_II", "Adolf_Hitler", "Osama_bin_Laden", "Taiwan", "Singapore", "Hong_Kong", "Iran", "Aung_San_Suu_Kyi"],
+                community9: ["New_Zealand", "New_Zealand_national_rugby_union_team", "Wikipedia", "Maori_people", "Wellington", "Auckland", "Christchurch", "New_Zealand_general_election,_2008", "New_Zealand_national_cricket_team", "Haka", "New_Zealand_general_election,_2005", "New_Zealand_national_cricket_team_in_Australia_in_2005–06", "Auckland_City_FC", "Wellington_Phoenix_FC", "New_Zealand_national_cricket_team_in_Sri_Lanka_in_2006–07", "New_Zealand_general_election,_1999", "New_Zealand_national_cricket_team_in_Sri_Lanka_in_1998–99", "Wellington_Phoenix_FC_season_2007–08", "New_Zealand_national_rugby_league_team", "New_Zealand_national_cricket_team_in_South_Africa_in_2007–08"],
+                community10: ["Aircraft", "Wikipedia", "Airbus_A380", "List_of_aircraft", "Boeing_787", "Aircraft_carrier", "Stealth_aircraft", "Helicopter", "Airship", "B-2_Spirit", "USS_Enterprise_(CVN-65)", "B-52_Stratofortress", "Northrop_Grumman_B-2_Spirit", "UAV", "A-10_Thunderbolt_II", "Sikorsky_UH-60_Black_Hawk", "List_of_military_aircraft_of_the_United_States", "Aircraft_manufacturer", "Lockheed_SR-71_Blackbird", "Bell_Boeing_V-22_Osprey"],
+                community11: ["Britney_Spears", "Wikipedia", "Harry_Potter", "High_School_Musical", "Avril_Lavigne", "YouTube", "Eminem", "United_States", "Hannah_Montana", "Miley_Cyrus", "Wii", "Transformers_(film)", "Nintendo_DS", "List_of_High_School_Musical_characters", "Hilary_Duff", "Munich_(film)", "2006", "High_School_Musical_2", "Soulja_Boy", "Vanessa_Hudgens"],
+                community12: ["India", "Mumbai", "Pakistan", "Mahatma_Gandhi", "Bollywood", "Wikipedia", "Delhi", "Taj_Mahal", "Hinduism", "Indian_national_cricket_team", "List_of_Indian_films", "Tamil_language", "Bharatiya_Janata_Party", "Jawaharlal_Nehru", "Communism", "Indira_Gandhi", "Sikh", "Indian_Premier_League", "Indian_national_cricket_team_in_Australia_in_2007–08", "Kolkata"],
+                community13: ["Wikipedia", "George_W_Bush", "Adolf_Hitler", "Osama_bin_Laden", "United_States", "World_War_II", "Joseph_Stalin", "Poland", "Chechnya", "George_Washington", "Ukraine", "Kiev", "Georgia_(country)", "Vietnam_War", "Cold_War", "Korea", "Japan", "Russia", "Iran", "Joseph_McCarthy"],
+                community14: ["Wikipedia", "George_W_Bush", "United_States", "World_War_II", "Osama_bin_Laden", "Adolf_Hitler", "George_Washington", "Joseph_Stalin", "John_F_Kennedy", "Ronald_Reagan", "Joseph_McCarthy", "Joseph_McCarthy", "Vietnam_War", "Barack_Obama", "Franklin_D_Roosevelt", "Winston_Churchill", "Cold_War", "Benito_Mussolini", "Korea", "Harry_S_Truman"],
+                community15: ["United_States", "George_W_Bush", "Wikipedia", "Barack_Obama", "World_War_II", "George_Washington", "John_F_Kennedy", "Vietnam_War", "United_States_Army", "American_Civil_War", "Joseph_Stalin", "Franklin_D_Roosevelt", "United_States_Navy", "American_Revolutionary_War", "George_H_W_Bush", "United_States_Air_Force", "Joseph_McCarthy", "American_Revolutionary_War", "American_Revolutionary_War", "Cold_War"],
+                community16: ["Science", "Wikipedia", "Scientific_method", "Astronomy", "Earth", "Physics", "Chemistry", "Biology", "Charles_Darwin", "Albert_Einstein", "History_of_science", "Theory_of_relativity", "Evolution", "DNA", "Stephen_Hawking", "String_theory", "Quantum_mechanics", "Periodic_table", "Big_Bang", "Genetics"],
+                community17: ["George_W_Bush", "Wikipedia", "United_States", "World_War_II", "Adolf_Hitler", "Osama_bin_Laden", "George_Washington", "John_F_Kennedy", "Ronald_Reagan", "Joseph_Stalin", "Joseph_McCarthy", "Barack_Obama", "Franklin_D_Roosevelt", "Winston_Churchill", "Benito_Mussolini", "Joseph_McCarthy", "Harry_S_Truman", "Korea", "Cold_War", "Vietnam_War"],
+                community18: ["United_Kingdom", "Northern_Ireland", "George_W._Bush", "Wikipedia", "Tony_Blair", "Margaret_Thatcher", "Gordon_Brown", "Winston_Churchill", "Ireland", "United_States", "Elizabeth_II_of_the_United_Kingdom", "Falklands_War", "British_Isles", "Bobby_Sands", "World_War_II", "List_of_British_flags", "September_11,_2001_attacks", "Sinn_Féin", "European_Union", "France"],
+                community19: ["Elonka_Dunin", "List_of_Lost_episodes", "Lost_(season_1)", "Dharma_Initiative", "Lost_(season_2)", "Kate_Austen", "George_W._Bush", "Lost_(TV_series)", "Characters_of_Lost", "Jimmy_Wales", "University_of_California,_Berkeley", "Others_(Lost)", "Lost_(season_3)", "Jack_Shephard", "Mythology_of_Lost", "James_\"Sawyer\"_Ford", "Effect_of_Hurricane_Katrina_on_New_Orleans", "Charlie_Pace", "Heroes_(TV_series)", "Benjamin_Franklin"],
+                community20: ["Chicago", "Barry_Bonds", "Al_Gore", "Minnesota", "George_W._Bush", "Roger_Clemens", "The_Simpsons", "William_Howard_Taft", "I-35W_Mississippi_River_bridge", "O._J._Simpson", "Tom_Brady", "Wisconsin", "Brett_Favre", "Reggie_Bush", "Devin_Hester", "Lance_Armstrong", "Football", "Jackie_Robinson", "Peyton_Manning", "Roman_Catholic_Church"],
+                community21: ["Scientology", "The_Holocaust", "Jesus", "George_W._Bush", "United_States", "Adolf_Hitler", "Germany", "L._Ron_Hubbard", "God", "Wikipedia", "Ann_Coulter", "Church_of_Scientology", "Sweden", "Scientology_controversy", "Albert_Einstein", "Fuck", "Prem_Rawat", "Saddam_Hussein", "Christianity", "Bible"],
+                community22: ["Canada", "Anaheim_Ducks", "Toronto_Maple_Leafs", "Edmonton_Oilers", "Toronto", "Montreal_Canadiens", "Calgary_Flames", "United_Kingdom", "Boston_Bruins", "Vancouver_Canucks", "Stephen_Harper", "Quebec", "Manchester", "Winnipeg", "Australia", "Los_Angeles_Kings", "Colorado_Avalanche", "New_York_Islanders", "San_Jose_Sharks", "Montreal"],
+                community23: ["Batman", "Spider-Man", "Superman", "Hulk_(comics)", "Heroes_(TV_series)", "George_W._Bush", "Namor", "Captain_America", "Joker_(comics)", "Fantastic_Four", "United_States", "Wii", "Venom_(Eddie_Brock)", "IPod", "Steven_Spielberg", "England", "God", "Iron_Man", "President_of_the_United_States", "Jesus"],
+                community24: ["Turkey", "Greece", "Romania", "Kosovo", "Armenian_Genocide", "Republic_of_Macedonia", "Serbia", "Macedonians_(ethnic_group)", "Ottoman_Empire", "Iran", "Greeks", "Macedonian_language", "Transnistria", "Azerbaijan", "Moldova", "Pontic_Greek_Genocide", "Albania", "Thessaloniki", "Northern_Cyprus", "List_of_unrecognized_countries"],
+                community25: ["Uranium", "Acetic_acid", "Carbon_dioxide", "Chloroform", "Carbon", "Theodore_Roosevelt", "Titanium", "Sulfuric_acid", "Ethylene", "Alcohol", "Carbon_monoxide", "Water_(molecule)", "Ammonia", "Toluene", "George_W._Bush", "Ozone", "Methanol", "Diborane", "Benzene", "Carbon_tetrachloride"],
+                community26: ["Paul_Wight", "George_W._Bush", "Randy_Orton", "Barack_Obama", "Triple_H", "The_Great_Khali", "Adam_Copeland", "Dave_Bautista", "Ric_Flair", "Stone_Cold_Steve_Austin", "John_Cena", "Bill_O'Reilly_(commentator)", "WWE_Raw", "The_Rock_(entertainer)", "Rob_Van_Dam", "John_F_Kennedy_assassination", "Hillary_Rodham_Clinton", "World_Wrestling_Entertainment_roster", "Trevor_Rhodes", "The_Undertaker"],
+                community27: ["Oregon", "Portland_Oregon", "Tom_Potter", "Oregon_State_University", "Salem_Oregon", "Eugene_Oregon", "Corvallis_Oregon", "University_of_Oregon", "John_McLoughlin", "Interstate_5", "Portland_Aerial_Tram", "Nike_Inc", "Vanport_Oregon", "Columbia_River", "Neil_Goldschmidt", "Rose_Garden_(arena)", "Newport_Oregon", "Portland_Trail_Blazers", "Willamette_River", "Tom_McCall"],
+                community28: ["George_W._Bush", "Wikipedia", "United_States", "Bill_Clinton", "Dick_Cheney", "Bill_O'Reilly_(commentator)", "Ann_Coulter", "Global_warming", "World_War_II", "Ronald_Reagan", "Hurricane_Katrina", "Jesus", "Abortion", "Scientology", "Joseph_Stalin", "Albert_Einstein", "Jimmy_Wales", "Adolf_Hitler", "Donald_Rumsfeld", "Evolution"]
+            };
+
+            // Get the list of associated words for the selected community
+            var words = communityWords[selectedCommunity];
+
+            // Display the associated words
+            var wordList = document.getElementById("associatedWords");
+            wordList.innerHTML = ""; // Clear previous entries
+
+            words.forEach(function (word) {
+                var listItem = document.createElement("li");
+                listItem.textContent = word;
+                wordList.appendChild(listItem);
+            });
+
+            // Show the word list
+            document.getElementById("wordList").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
