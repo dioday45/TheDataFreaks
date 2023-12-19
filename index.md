@@ -93,3 +93,4 @@ The other dataset comprises the edits on different Wikipedia pages. From that, w
 
 <iframe src="assets/html/menu.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
+<img src="assets/img/shades_of_blue.png" width="2000" height="450">
