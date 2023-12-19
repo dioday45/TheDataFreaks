@@ -90,7 +90,7 @@ As we wanted to have more information about these elections, we added additional
 
 The other dataset comprises the edits on different Wikipedia pages. From that, we can gather the pages edited by a user, to identify their centers of interest, and compare them with other users. If their interests are similar enough, we will consider that these users are part of the same community.
 
-![shades_of_blue](/Users/jdidio/Downloads/shades_of_blue.png)
+![shades_of_blue](assets/img/shades_of_blue.png)
 
 <iframe src="assets/html/menu.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
 
