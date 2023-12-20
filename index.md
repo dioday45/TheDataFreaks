@@ -1,6 +1,6 @@
 ---
 layout: page
-title: BOB's Journey to Adminship
+title: Bob's Journey to Adminship
 subtitle: Exploring the world of Wikipedia Requests for Adminships
 cover-img: /assets/img/GDELT-GKG-2016-2018-Outlink-Graph-Random10KAll-6K-Thick.png
 thumbnail-img: /assets/img/GDELT-GKG-2016-2018-Outlink-Graph-Random10KAll-6K-Thick.png
