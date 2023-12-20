@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Wikipedia Requests for Adminship
-subtitle: Exploring the world of RfA
+title: BOB's Journey to Adminship
+subtitle: Exploring the world of Wikipedia Requests for Adminships
 cover-img: /assets/img/GDELT-GKG-2016-2018-Outlink-Graph-Random10KAll-6K-Thick.png
 thumbnail-img: /assets/img/GDELT-GKG-2016-2018-Outlink-Graph-Random10KAll-6K-Thick.png
 share-img: /assets/img/GDELT-GKG-2016-2018-Outlink-Graph-Random10KAll-6K-Thick.png
@@ -14,8 +14,9 @@ use-site-title: true
 Wikipedia, the world's largest online encyclopedia, relies on a community of dedicated contributors to maintain and improve its vast repository of knowledge. Admins (short for administrators) play a crucial role in this ecosystem by overseeing the platform, ensuring its integrity, and facilitating a collaborative and respectful environment for editors. The process through which individuals become administrators is known as the Request for Adminship (RfA). Adminship is not just a privilege but a responsibility, and those seeking this role are expected to have a deep understanding of Wikipedia policies, guidelines, and a history of constructive contributions. All the admins have the ability to delete pages, protect pages from editing, and block users, among other tools. Those tasks necessitate a high level of trust from the community, hence, the importance of robust votation in Wikipedia's administrative elections cannot be overstated. They need to ensure a fair and equitable system. A diverse voter base ensures a variety of perspectives, mitigating the risk of undue influence or bias. In short, the votation process is a crucial mechanism for upholding fairness, transparency, and community consensus.
 
 In an ideal world, candidates should be driven by a commitment to actively engage in the governance structure of Wikipedia. On the other side, voters, like Bob, should have for objective to 
-ensure that candidates are selected based on their merit, experience, and dedication to the fundamental principles of Wikipedia. However, from 2003 to 2013, there was an average of 53 votes per election out of the millions of registered users[^1] allowed to vote. This low turnout raises questions about the fairness and integrity of the system.^
-[^1]: Wikimedia, number of registered users 2003-2013](https://stats.wikimedia.org/#/en.wikipedia.org/contributing/new-registered-users/normal|bar|2003-01-28~2013-05-01|~total|monthly)
+ensure that candidates are selected based on their merit, experience, and dedication to the fundamental principles of Wikipedia. However, from 2003 to 2013, there was an average of 53 votes per election out of the millions of registered users[^1] allowed to vote. This low turnout raises questions about the fairness and integrity of the system.
+
+[^1]: Wikimedia, number of registered users 2003-2013, https://stats.wikimedia.org/#/en.wikipedia.org/contributing/new-registered-users/normal|bar|2003-01-28~2013-05-01|~total|monthly
 
 In this data story, we aim to address the following questions:
 
@@ -107,7 +108,7 @@ The presence of those communities within Wikipedia introduces significant challe
 
 To detect the presence of such behavior, we examine the ratio of positive votes between pairs of communities, comparing it to the baseline ratio derived from the entire dataset. The graph below displays only those results that show statistical significance (at the 0.01 level) when compared to this standard. Green arrows denote communities that statistically vote more positively for each other, while red arrows signify communities that exhibit a lower positive vote tendency toward each other. Additionally, the size of each point in the graph is proportional to the size of the community it represents.
 
-<iframe src="assets/html/graph_daniel.html" position="relative">Genre plot</iframe>
+<iframe src="assets/html/graph_daniel.html" width="750px" height="530px" position="relative">Genre plot</iframe>
 
 We can denote that for all the groups that have a self-loop, this latter is green. Half of the groups have this arrow. This brings evidence for intra-community favoritism. We also see clear signs of negative voting dynamics. The most telling is “Pop culture mix”. This community is mostly made of Pop Culture and People magazines topics. Some examples are “David Beckham”, “Britney Spears” and “Paris Hilton”. We can make the assumption that those topics are not seen as serious enough by the Wikipedia community or that its community may consist of more novice users. For that reason, we observe a consequent number of negative arrows pointing towards this community. Some votes also have a cultural influence. We observe “Balkans and Central Asia” voting positively towards “Russia and Eastern Europe”. And some votes open the door for interpretation. “Religion Debates and Controversies” not supporting “Youth Pop Culture” can be interpreted as a way for Religion to contest the society in which youngsters live. This already gives us an idea of the motivation behind votes.
 
