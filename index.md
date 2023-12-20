@@ -42,7 +42,7 @@ Our main dataset, the [Wiki-RfA](https://snap.stanford.edu/data/wiki-RfA.html)[^
 ## Complete Wikipedia Edit History (Up to Jan 2008)
 Our second dataset, the [Complete Wikipedia Edit History](https://snap.stanford.edu/data/wiki-meta.html)[^3], provide a complementary perspective. This dataset is a vast repository containing several terabytes of text, capturing the entire edit history of Wikipedia articles up to January 2008. It is divided into several components, showcased in the following table, each representing different facets of Wikipedia.
 
-| File                           | Description                         | Size  |
+| File                           | Description                         | Size (compressed) |
 | ------------------------------ | ----------------------------------- | ----- |
 | Main Namespace Revisions       | Core Wikipedia articles             | 8Gb   |
 | Talk Namespace Edits           | Article discussion pages            | <1 GB |
