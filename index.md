@@ -16,7 +16,7 @@ Wikipedia, the world's largest online encyclopedia, relies on a community of ded
 In an ideal world, candidates should be driven by a commitment to actively engage in the governance structure of Wikipedia. On the other side, voters, like Bob, should have for objective to 
 ensure that candidates are selected based on their merit, experience, and dedication to the fundamental principles of Wikipedia. However, from 2003 to 2013, there was an average of 53 votes per election out of the millions of registered users[^1] allowed to vote. This low turnout raises questions about the fairness and integrity of the system.
 
-[^1]: Wikimedia, [number of registered users 2003-2013](https://stats.wikimedia.org/#/en.wikipedia.org/contributing/new-registered-users/normal|bar|2003-01-28~2013-05-01|~total|monthly)
+[^1]: Wikimedia, number of registered users 2003-2013, https://stats.wikimedia.org/#/en.wikipedia.org
 
 In this data story, we aim to address the following questions:
 
