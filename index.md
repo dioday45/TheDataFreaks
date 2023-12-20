@@ -88,7 +88,7 @@ Commencing our analysis, we construct a graph illustrating interactions on perso
 
 Now that we have identified 29 communities, analyzing the content edited by each community presents an exciting opportunity. By scrutinizing the content they engage with and the topics they choose to edit, we can gain a deeper understanding of what binds each community together. The goal is to dissect the content edited by each community and use this information to better understand the motivations of each vote. The following dropdown menu shows the 20 most edited pages for each community.
 
-<iframe src="assets/html/menu.html" width="750px" height="530px" frameborder="0" position="relative">Genre plot</iframe>
+<iframe src="assets/html/menu.html" width="750px" height="600px" frameborder="0" position="relative">Genre plot</iframe>
 
 Analyzing the menu above, it becomes evident that, while the majority of edited pages are centered around American culture, distinct focal points of interest emerge for each community.
 
@@ -108,7 +108,7 @@ The presence of those communities within Wikipedia introduces significant challe
 
 To detect the presence of such behavior, we examine the ratio of positive votes between pairs of communities, comparing it to the baseline ratio derived from the entire dataset. The graph below displays only those results that show statistical significance (at the 0.01 level) when compared to this standard. Green arrows denote communities that statistically vote more positively for each other, while red arrows signify communities that exhibit a lower positive vote tendency toward each other. Additionally, the size of each point in the graph is proportional to the size of the community it represents.
 
-<iframe src="assets/html/graph_daniel.html" width="750px" height="750px" position="relative">Genre plot</iframe>
+<iframe src="assets/html/graph_daniel.html" width="750px" height="500px" frameborder="0" position="relative">Genre plot</iframe>
 
 We can denote that for all the groups that have a self-loop, this latter is green. Half of the groups have this arrow. This brings evidence for intra-community favoritism. We also see clear signs of negative voting dynamics. The most telling is “Pop culture mix”. This community is mostly made of Pop Culture and People magazines topics. Some examples are “David Beckham”, “Britney Spears” and “Paris Hilton”. We can make the assumption that those topics are not seen as serious enough by the Wikipedia community or that its community may consist of more novice users. For that reason, we observe a consequent number of negative arrows pointing towards this community. Some votes also have a cultural influence. We observe “Balkans and Central Asia” voting positively towards “Russia and Eastern Europe”. And some votes open the door for interpretation. “Religion Debates and Controversies” not supporting “Youth Pop Culture” can be interpreted as a way for Religion to contest the society in which youngsters live. This already gives us an idea of the motivation behind votes.
 
