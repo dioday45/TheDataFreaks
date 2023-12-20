@@ -23,12 +23,9 @@ navbar-links:
   The Datasets: 
     - Wikipedia RfA: "https://snap.stanford.edu/data/wiki-RfA.html"
     - Wikipedia edit history: "https://snap.stanford.edu/data/wiki-meta.html"
-  About: aboutus
-#  About Me: "aboutme"
-#  Resources:
-#    - Beautiful Jekyll: "https://beautifuljekyll.com"
-#    - Learn markdown: "https://www.markdowntutorial.com/"
-#  Author's home: "https://deanattali.com"
+  GitHub: "https://github.com/epfl-ada/ada-2023-homework-1-thedatafreaks"
+  About the Team: aboutus
+
 
 ################
 # --- Logo --- #
