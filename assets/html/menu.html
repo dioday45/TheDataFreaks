@@ -36,8 +36,9 @@ text-align: center;
     <label for="communitySelect">Select a Community:</label>
     <select id="communitySelect" onchange="showWords()">
         <!-- Add a default option -->
-        <option value="" disabled selected>Select a Community</option>
-        <option value="community0">Pop Culture Mix</option>
+        <option value="" disabled>Select a Community</option>
+        <option value="community0">New Zealand</option>
+
         <option value="community1">Middle East & Religion</option>
         <option value="community2">Varied Interests</option>
         <option value="community3">USA Historical Figures</option>
@@ -46,7 +47,8 @@ text-align: center;
         <option value="community6">Controversial Pop Culture</option>
         <option value="community7">Russia & Eastern Europe</option>
         <option value="community8">USA & East Asia Mix</option>
-        <option value="community9">New Zealand</option>
+        <option value="community9">Pop Culture Mix</option>
+
         <option value="community10">Military Aircraft</option>
         <option value="community11">Youth Pop Culture</option>
         <option value="community12">India & South Asia</option>
@@ -82,7 +84,7 @@ text-align: center;
 
             // Define the associated words for each community
             var communityWords = {
-                community0: ["Britney_Spears", "George_W_Bush", "Wikipedia", "PlayStation_3", "United_States", "David_Beckham", "Wii", "Adolf_Hitler", "Paris_Hilton", "The_Beatles", "2006_FIFA_World_Cup", "24_(TV_series)", "Bill_Clinton", "Christina_Aguilera", "World_War_II", "Hurricane_Katrina", "Green_Day", "Family_Guy", "Xbox", "2006"],
+                community0: ["New_Zealand", "New_Zealand_national_rugby_union_team", "Wikipedia", "Maori_people", "Wellington", "Auckland", "Christchurch", "New_Zealand_general_election,_2008", "New_Zealand_national_cricket_team", "Haka", "New_Zealand_general_election,_2005", "New_Zealand_national_cricket_team_in_Australia_in_2005–06", "Auckland_City_FC", "Wellington_Phoenix_FC", "New_Zealand_national_cricket_team_in_Sri_Lanka_in_2006–07", "New_Zealand_general_election,_1999", "New_Zealand_national_cricket_team_in_Sri_Lanka_in_1998–99", "Wellington_Phoenix_FC_season_2007–08", "New_Zealand_national_rugby_league_team", "New_Zealand_national_cricket_team_in_South_Africa_in_2007–08"],
                 community1: ["Muhammad", "Israel", "Jerusalem", "Islam", "2006_Lebanon_War", "The_Holocaust", "Jesus", "George_W_Bush", "Hezbollah", "Wikipedia", "Jyllands-Posten_Muhammad_cartoons_controversy", "Allegations_of_Israeli_apartheid", "Mahmoud_Ahmadinejad", "New_antisemitism", "Zionism", "Islamic_terrorism", "Antisemitism", "Judaism", "Hamas", "Qur_an"],
                 community2: ["Wikipedia", "Tom_Hanks", "Albert_Einstein", "Zeus", "Super_Smash_Bros._Brawl", "John_F_Kennedy", "Jimmy_Wales", "Bill_Gates", "Nerd", "The_Simpsons", "J_K_Rowling", "Bill_Clinton", "Cannabis_(drug)", "Martin_Luther_King,_Jr.", "Cheese", "Forrest_Gump_(film)", "Avril_Lavigne", "Guitar", "Ludwig_van_Beethoven", "Wii"],
                 community3: ["Wikipedia", "George_W_Bush", "World_War_II", "Adolf_Hitler", "Tom_Cruise", "Albert_Einstein", "Ronald_Reagan", "Cat", "Michael_Jackson", "United_States", "Dragon", "George_Washington", "Abraham_Lincoln", "Agriculture", "Statue_of_Liberty", "RuneScape", "Theodore_Roosevelt", "Rabbit", "Dog", "Gay"],
@@ -91,7 +93,7 @@ text-align: center;
                 community6: ["George_W_Bush", "Wikipedia", "United_States", "Michael_Jackson", "Adolf_Hitler", "Britney_Spears", "Jesus", "Bill_Gates", "Hurricane_Katrina", "Osama_bin_Laden", "Bill_Clinton", "George_Washington", "RuneScape", "Gay", "World_War_II", "Dog", "Wiki", "Harry_Potter", "George_H_W_Bush", "Nigger"],
                 community7: ["Russia", "Joseph_Stalin", "Kiev", "World_War_II", "Ukraine", "Józef_Piłsudski", "Russia_military_intervention_in_Ukraine_(2014–present)", "Joseph_McCarthy", "Vladimir_Putin", "Poland", "Wikipedia", "Russian_language", "Russian_Revolution", "Ukrainian_Soviet_Socialist_Republic", "Chechnya", "Red_Army", "Leon_Trotsky", "Cold_War", "Adolf_Hitler", "Krasnoyarsk"],
                 community8: ["United_States", "China", "Wikipedia", "Japan", "Korea", "Russia", "North_Korea", "George_W_Bush", "Barack_Obama", "Iraq", "China_economics", "Vietnam_War", "World_War_II", "Adolf_Hitler", "Osama_bin_Laden", "Taiwan", "Singapore", "Hong_Kong", "Iran", "Aung_San_Suu_Kyi"],
-                community9: ["New_Zealand", "New_Zealand_national_rugby_union_team", "Wikipedia", "Maori_people", "Wellington", "Auckland", "Christchurch", "New_Zealand_general_election,_2008", "New_Zealand_national_cricket_team", "Haka", "New_Zealand_general_election,_2005", "New_Zealand_national_cricket_team_in_Australia_in_2005–06", "Auckland_City_FC", "Wellington_Phoenix_FC", "New_Zealand_national_cricket_team_in_Sri_Lanka_in_2006–07", "New_Zealand_general_election,_1999", "New_Zealand_national_cricket_team_in_Sri_Lanka_in_1998–99", "Wellington_Phoenix_FC_season_2007–08", "New_Zealand_national_rugby_league_team", "New_Zealand_national_cricket_team_in_South_Africa_in_2007–08"],
+                community9: ["Britney_Spears", "George_W_Bush", "Wikipedia", "PlayStation_3", "United_States", "David_Beckham", "Wii", "Adolf_Hitler", "Paris_Hilton", "The_Beatles", "2006_FIFA_World_Cup", "24_(TV_series)", "Bill_Clinton", "Christina_Aguilera", "World_War_II", "Hurricane_Katrina", "Green_Day", "Family_Guy", "Xbox", "2006"],
                 community10: ["Aircraft", "Wikipedia", "Airbus_A380", "List_of_aircraft", "Boeing_787", "Aircraft_carrier", "Stealth_aircraft", "Helicopter", "Airship", "B-2_Spirit", "USS_Enterprise_(CVN-65)", "B-52_Stratofortress", "Northrop_Grumman_B-2_Spirit", "UAV", "A-10_Thunderbolt_II", "Sikorsky_UH-60_Black_Hawk", "List_of_military_aircraft_of_the_United_States", "Aircraft_manufacturer", "Lockheed_SR-71_Blackbird", "Bell_Boeing_V-22_Osprey"],
                 community11: ["Britney_Spears", "Wikipedia", "Harry_Potter", "High_School_Musical", "Avril_Lavigne", "YouTube", "Eminem", "United_States", "Hannah_Montana", "Miley_Cyrus", "Wii", "Transformers_(film)", "Nintendo_DS", "List_of_High_School_Musical_characters", "Hilary_Duff", "Munich_(film)", "2006", "High_School_Musical_2", "Soulja_Boy", "Vanessa_Hudgens"],
                 community12: ["India", "Mumbai", "Pakistan", "Mahatma_Gandhi", "Bollywood", "Wikipedia", "Delhi", "Taj_Mahal", "Hinduism", "Indian_national_cricket_team", "List_of_Indian_films", "Tamil_language", "Bharatiya_Janata_Party", "Jawaharlal_Nehru", "Communism", "Indira_Gandhi", "Sikh", "Indian_Premier_League", "Indian_national_cricket_team_in_Australia_in_2007–08", "Kolkata"],
@@ -129,6 +131,7 @@ text-align: center;
             // Show the word list
             document.getElementById("wordList").style.display = "block";
         }
+        window.onload = function () {showWords();};
     </script>
 
 </body>
