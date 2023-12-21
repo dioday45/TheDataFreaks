@@ -62,7 +62,7 @@ In this project, the focus was on the Main Namespace Revisions and User Talk Pag
 Our dataset is not just a collection of numbers, it is a reflection of the motivations and actions of voters within the RfA process. As we want to dive into the complexity of voting behavior in RfA elections. We first question ourselves about the behavior of the voters. Do people vote a lot? Do they vote positively or negatively?
 First, we see here that we have a really important proportion of positive votes in our dataset.
 
-<iframe src="assets/html/vote_distrib.html" frameborder="0" position="relative">Genre plot</iframe>
+<iframe src="assets/html/vote_distrib.html" width="750px" height="550px" frameborder="0" position="relative">Genre plot</iframe>
 
 However, we see that the voting behavior of users is extremely imbalanced. We have an important part of the users who vote only once. The distribution has a large tail, some of the users voted 200, 400, 600 and even one voted 1200 times ! This phenomena is starting to interest Bob, as Bob is planning on running for an RfA he would like to know why so few people vote? 
 
@@ -71,14 +71,14 @@ However, we see that the voting behavior of users is extremely imbalanced. We ha
 Before answering Bob, we should first explore further analysis regarding the elections.
 We said before that the majority of votes are positive. Great! If the majority of votes are positive, the majority of elections are successful so Bob has a high chance of becoming an admin! Hum, hum …
 
-<iframe src="assets/html/election_outcome.html" frameborder="0" position="relative">Genre plot</iframe>
+<iframe src="assets/html/election_outcome.html" width="750px" height="550px" frameborder="0" position="relative">Genre plot</iframe>
 
 Election outcomes are very well balanced between success and failure. By following the duration of 7 days for election, as indicated by wikipedia RfA’s guide, we obtain more unsuccessful elections than successful ones. Why? Actually elections only get successful when an important majority of the votes are positive, around 80%!
 Bob begins to feel disheartened as the majority of elections do not yield successful outcomes, many voters appear disengaged from the process, and to add to his challenges, Bob still needs to persuade a significant portion of the electorate.
 Here is some relief: what this plot shows is that, among the users who end up getting elected, most of them do it on their first election. However, assiduity can pay off as some wait as many as 6 elections before getting elected! 
 Wikipedia RfA is a lot about perseverance, 40% of the users who run for an election give up after an unsuccessful first election! So Bob is now quite relieved but still a question torments him : How can he influence the result of his election? Let’s dig into it!
 
-<iframe src="assets/html/number_elections_per_person.html" frameborder="0" position="relative">Genre plot</iframe>
+<iframe src="assets/html/number_elections_per_person.html" width="750px" height="550px" frameborder="0" position="relative">Genre plot</iframe>
 
 
 # Elections Dynamics
