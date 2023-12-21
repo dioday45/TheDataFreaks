@@ -90,7 +90,7 @@ Commencing our analysis, we construct a graph illustrating interactions on perso
 
 Now that we have identified 29 communities, analyzing the content edited by each community presents an exciting opportunity. By scrutinizing the content they engage with and the topics they choose to edit, we can gain a deeper understanding of what binds each community together. The goal is to dissect the content edited by each community and use this information to better understand the motivations of each vote. The following dropdown menu shows the 20 most edited pages for each community.
 
-<iframe src="assets/html/menu.html" width="750px" height="620px" frameborder="0" position="relative">Genre plot</iframe>
+<iframe src="assets/html/menu.html" width="750px" height="650px" frameborder="0" position="relative">Genre plot</iframe>
 
 Analyzing the menu above, it becomes evident that, while the majority of edited pages are centered around American culture, distinct focal points of interest emerge for each community.
 
@@ -114,6 +114,8 @@ To detect the presence of such behavior, we examine the ratio of positive votes 
 
 We can denote that for all the groups that have a self-loop, this latter is green. Half of the groups have this arrow. This brings evidence for intra-community favoritism. We also see clear signs of negative voting dynamics. The most telling is “Pop culture mix”. This community is mostly made of Pop Culture and People magazines topics. Some examples are “David Beckham”, “Britney Spears” and “Paris Hilton”. We can make the assumption that those topics are not seen as serious enough by the Wikipedia community or that its community may consist of more novice users. For that reason, we observe a consequent number of negative arrows pointing towards this community. Some votes also have a cultural influence. We observe “Balkans and Central Asia” voting positively towards “Russia and Eastern Europe”. And some votes open the door for interpretation. “Religion Debates and Controversies” not supporting “Youth Pop Culture” can be interpreted as a way for Religion to contest the society in which youngsters live. This already gives us an idea of the motivation behind votes.
 
+<img align="left" src="assets/img/bob_aussie.png" width=250>
+
 As an Australian, Bob is delighted with these results. Now, armed with the knowledge that he can anticipate strong support from his community, he also finds assurance in the absence of any indications of animosity between the Australian community and any other group.
 
 # Conclusion
@@ -128,3 +130,5 @@ To further incentivize participation, we recommend offering rewards to users who
 To facilitate the voting process and ensure the meaningfulness of each vote, we propose accompanying each invitation with an explanatory note about the candidate. Drawing inspiration from Wikipedia's well-established [guide for voters](https://en.wikipedia.org/wiki/Wikipedia:Advice_for_RfA_voters), we suggest leveraging Wikipedia's resources to provide a concise summary along with various statistics on the candidate's contributions. This approach significantly reduces the effort required for voters to make informed decisions.
 
 By implementing these solutions, our goal is to diminish the influence of support based on existing connections or shared interests, promoting a more impartial and equitable voting process. Additionally, we anticipate that this approach will lead to increased voter turnout, thereby enhancing the overall fairness of the system.
+
+# References
