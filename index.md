@@ -86,6 +86,9 @@ Wikipedia RfA is a lot about perseverance, 40% of the users who run for an elect
 **TODO**
 
 ## Hidden Structures: Communities and their Impact on RfA Elections in Wikipedia
+
+<img align="left" src="assets/img/bob_idea.png" width=250 style="border:10px solid #FFFF">
+
 Bob has interacted a lot throughout his Wikipedia journey with other users. He perceives himself as a member of a small intellectual community, bonded by similar interests. He is very curious to know whether his community will have an impact on his election and, if so, what kind of impact it might have.
 
 Indeed, the influence of communities – often subtle, sometimes unseen – may play a crucial role in shaping the outcomes and the turnout of these elections. At the core of these unseen communities lie the personal talk pages of Wikipedia users, a virtual place where individuals engage in conversations, share insights, and negotiate differences. These personal talk pages serve as a unique space, reflecting concrete and direct interactions between users.
