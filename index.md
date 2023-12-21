@@ -26,7 +26,7 @@ In this data story, we aim to address the following questions:
 
 Our aim is to investigate the factors influencing participation and identify the challenges that arise from the low engagement rate. Based on our research, we intend to propose solutions to increase the participation rate.
 
-<iframe src="assets/img/bob.png" align="right"  width="200">bob</iframe>
+<img align="right" src="assets/img/bob.png" width=250>
 
 Before we dive into the data, let me introduce you to Bob. Bob is an avid Wikipedia user. Having spent countless hours contributing to Wikipedia articles, he is now considering applying to become admin. However, he's a careful observer who wants to maximize his chance of being elected. Hence, he wants to know more about the voting habits before applying.
 
