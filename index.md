@@ -114,7 +114,7 @@ To detect the presence of such behavior, we examine the ratio of positive votes 
 
 We can denote that for all the groups that have a self-loop, this latter is green. Half of the groups have this arrow. This brings evidence for intra-community favoritism. We also see clear signs of negative voting dynamics. The most telling is “Pop culture mix”. This community is mostly made of Pop Culture and People magazines topics. Some examples are “David Beckham”, “Britney Spears” and “Paris Hilton”. We can make the assumption that those topics are not seen as serious enough by the Wikipedia community or that its community may consist of more novice users. For that reason, we observe a consequent number of negative arrows pointing towards this community. Some votes also have a cultural influence. We observe “Balkans and Central Asia” voting positively towards “Russia and Eastern Europe”. And some votes open the door for interpretation. “Religion Debates and Controversies” not supporting “Youth Pop Culture” can be interpreted as a way for Religion to contest the society in which youngsters live. This already gives us an idea of the motivation behind votes.
 
-<img align="left" src="assets/img/bob_aussie.png" width=250>
+<img align="left" src="assets/img/bob_aussie.png" width=250 style="border:10px">
 
 As an Australian, Bob is delighted with these results. Now, armed with the knowledge that he can anticipate strong support from his community, he also finds assurance in the absence of any indications of animosity between the Australian community and any other group.
 
