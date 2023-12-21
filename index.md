@@ -158,7 +158,7 @@ With those communities we observe that 25.96% of the votes are intra-cluster, in
 
 To make it more general, we compute the numbers of votes from each community to every other community and normalize these values by the corresponding expected numbers of votes based on community sizes. The matrix presented here highlights the significance of votes within the same community, as these values consistently exceed those of inter-community voting. For example, users in the "Military Aircraft" community are 8.82 times more likely to participate in the election of another community member compared to the random baseline.
 
-![shades_of_blue](assets/img/shades_of_blue.png){: width="2000"}
+[![shades_of_blue](assets/img/shades_of_blue.png)](assets/img/shades_of_blue.png)
 
 The existence of specific community interests or perspectives may lead to biases in voting behavior, favoring candidates aligned with particular groups over others based on shared ideologies.
 
