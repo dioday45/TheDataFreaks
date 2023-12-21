@@ -128,7 +128,14 @@ As an Australian, Bob is delighted with these results. Now, armed with the knowl
 
 # Conclusion
 
-**TODO**
+Concluding our investigation into Wikipedia's Request for Adminship (RfA) process, we find nuanced answers to our initial questions. Regarding the fairness of the election process, our data indicates potential issues. The low voter turnout and the strong influence of community affiliations suggest that the process may not be as fair and representative as ideally envisioned. First, we saw that the users are highly influenced by their neighborhood. This is particularly evident in the intra-community voting patterns, where members are more likely to vote for candidates within their own community, potentially sidelining equally qualified candidates from other groups. 
+
+In addressing what drives people to vote, our analysis shows that personal interactions and community ties play a significant role. Voters go out of their way to participate in elections involving candidates they have interacted with, indicating a preference for familiar individuals. This insight is crucial for candidates like Bob, who should focus on broadening their network and engaging with diverse community groups to increase their visibility and support.
+
+In summary, while the RfA system strives for democratic ideals, our findings reveal areas for improvement, particularly in enhancing fairness and reducing community-driven biases. For aspiring admins like Bob, understanding these dynamics is key to maximize their chances of being elected.
+
+<img src="assets/img/bob_happy.png" width="500" class="center"/>
+
 
 # Suggested Solutions
 To strengthen the democratic process, our objective is to enhance voter participation, particularly among individuals who may not typically vote for each other. We aim to provide persuasive reasons for users to engage in the voting process, especially when they are unfamiliar with a candidate or lack a direct connection. Our proposed solution involves sending well-timed invitations to random users, encouraging their participation in specific elections. The strategic use of invitations aims to motivate users to cast their votes and we introduce an element of randomness to diversify the pool of voters. Consequently, it reduces the impact of a given community on the overall outcome.
