@@ -14,7 +14,7 @@ use-site-title: true
 Wikipedia, the world's largest online encyclopedia, relies on a community of dedicated contributors to maintain and improve its vast repository of knowledge. Admins (short for administrators) play a crucial role in this ecosystem by overseeing the platform, ensuring its integrity, and facilitating a collaborative and respectful environment for editors. The process through which individuals become administrators is known as the Request for Adminship (RfA). Adminship is not just a privilege but a responsibility, and those seeking this role are expected to have a deep understanding of Wikipedia policies, guidelines, and a history of constructive contributions. All the admins have the ability to delete pages, protect pages from editing, and block users, among other tools. Those tasks necessitate a high level of trust from the community, hence, the importance of robust votation in Wikipedia's administrative elections cannot be overstated. They need to ensure a fair and equitable system. A diverse voter base ensures a variety of perspectives, mitigating the risk of undue influence or bias. In short, the votation process is a crucial mechanism for upholding fairness, transparency, and community consensus.
 
 In an ideal world, candidates should be driven by a commitment to actively engage in the governance structure of Wikipedia. On the other side, voters, like Bob, should have for objective to 
-ensure that candidates are selected based on their merit, experience, and dedication to the fundamental principles of Wikipedia. However, from 2003 to 2013, there was an average of 53 votes per election out of the millions of registered users[^1] allowed to vote. This low turnout raises questions about the fairness and integrity of the system.
+ensure that candidates are selected based on their merit, experience, and dedication to the fundamental principles of Wikipedia. However, from 2003 to 2013, there was an **average of 53 votes** per election out of the millions of registered users[^1] allowed to vote. This low turnout raises questions about the fairness and integrity of the system.
 
 [^1]: Wikimedia, number of registered users 2003-2013, https://stats.wikimedia.org/#/en.wikipedia.org
 
@@ -73,7 +73,7 @@ We said before that the majority of votes are positive. Great! If the majority o
 
 <iframe src="assets/html/election_outcome.html" width="750px" height="550px" frameborder="0" position="relative">Genre plot</iframe>
 
-Election outcomes are very well balanced between success and failure. By following the duration of 7 days for election, as indicated by wikipedia RfA’s guide, we obtain more unsuccessful elections than successful ones. Why? Actually elections only get successful when an important majority of the votes are positive, around 80%!
+Election outcomes are very well balanced between success and failure. By following the duration of 7 days for election, as indicated by [wikipedia RfA’s guide](https://en.wikipedia.org/wiki/Wikipedia:Requests_for_adminship#About_RfB), we obtain more unsuccessful elections than successful ones. Why? Actually elections only get successful when an important majority of the votes are positive, around 80%!
 Bob begins to feel disheartened as the majority of elections do not yield successful outcomes, many voters appear disengaged from the process, and to add to his challenges, Bob still needs to persuade a significant portion of the electorate.
 Here is some relief: what this plot shows is that, among the users who end up getting elected, most of them do it on their first election. However, assiduity can pay off as some wait as many as 6 elections before getting elected! 
 Wikipedia RfA is a lot about perseverance, 40% of the users who run for an election give up after an unsuccessful first election! So Bob is now quite relieved but still a question torments him : How can he influence the result of his election? Let’s dig into it!
@@ -83,7 +83,52 @@ Wikipedia RfA is a lot about perseverance, 40% of the users who run for an elect
 
 # Elections Dynamics
 ## Individual perspectives in RfA Elections
-**TODO**
+We already saw that users don’t vote much and on average they participate in 18 distinct RfA’s during their Wikipedia user’s life. Something even more surprising is that the majority of the users take around 70 days between each of their votes. Users are not very active… But as they are a key player in Bob’s RfA, he wants to know what he could do to influence the outcome of his election.
+
+What drives people to take part in specific elections? 
+
+As our dataset contains only votes of election, it is not particularly straightforward to know what influences the voters not to vote. To address this, we create a balanced dataset by pairing (for a given election) a voter and a non-voter that have similar voting statistics. Then we conduct a logistic regression, incorporating two key features: the number of contacts from the voter who voted before him and a binary variable representing contact between the voter and the person running for election[^4]. 
+It turns out that the two features have coefficients XX for the first one and YY for the second one. The regression showed a pseudo R-squared of XX and a p-value of 0 for both our features. 
+This is an important breakthrough for us as we have here two major key players that drive the participation of users. We should hurry to advise Bob to engage with more people in order to have more voters who participate in his election.
+
+[^4]: Paper of Cabunducan, G. https://ieeexplore.ieee.org/document/5992657
+
+What can influence the vote of a voter election? 				
+			
+A first intuition could be to say that interactions with users tend to influence the result of a vote as displayed by this graph, i.e the users with whom Bob interacts a lot will tend to vote positively in Bob’s interaction : 
+
+
+<iframe src="assets/html/percentage_interactions.html" width="750px" height="550px" frameborder="0" position="relative">Genre plot</iframe>
+
+We now conduct a different logistic regression to predict the value of the vote using two different features. The initial pair of features corresponds to the number of contacts who voted positively for the election (before our user) and the number of contacts who voted negatively before him. The second feature is a binary feature that represents that a  communication exists between the candidate and the voter.  
+The two first features have coefficients XX for contacts with positive votes and XX for contacts with negative votes. The direct contact feature has a coefficient of YY. The regression showed a pseudo R-squared of XX and a p-value of 0 for all our features. 
+All the coefficients align with our anticipations. What stands out is the notable predictive power of the user’s one-hop neighborhood in determining vote values. Surprisingly, the presence of contacts who voted negatively exerts more influence than those who voted positively. This reaffirms our earlier recommendation to engage with more people.
+
+Bob now has a few insights on what he can do to improve his chances. However, as ambitious as Bob is, he wants to find other things that can improve his chances. A friend of his told him that Charlie has been elected by creating fake accounts and voting for himself.
+
+Bob has gained some valuable insights into what he can do to improve his chances. However, fueled by his ambition, he wants to explore additional strategies that could boost his chances. A friend mentioned to him that Charlie secured an election by generating fake accounts and casting votes in his favor. He is now wondering whether such a practice is commonplace on Wikipedia.
+
+<img align="right" src="assets/img/bob_dark.png" width=250 style="border:10px solid #FFFF">
+
+This rumor raises great concerns about the election fairness. Indeed, a potential challenge to the fairness of elections is the use of fake accounts by candidates to artificially boost their support. This practice could be particularly effective given the low voter turnout. Not only does this undermine the fairness of the whole system, but it also casts doubt on the legitimacy of the entire election process. It is crucial to identify and address such malicious practices to ensure that meritocracy prevails, and every participant's voice carries equal weight.
+
+To question the presence of fake accounts in the RfA election on Wikipedia, we filter the users of the dataset based on their votes and edits. Our primary focus was on identifying users exhibiting characteristics indicative of potential fraudulent activity.
+
+- The criteria for identifying potential fake accounts are:
+- No edits
+- Single vote participation
+
+If a user creates multiple accounts to artificially inflate positive votes, it's probable that they won't invest time in making edits with each account before casting a vote. Additionally, the user is likely to abandon most of these accounts, leaving them with zero edits and just one vote. Therefore, these straightforward characteristics serve as effective indicators to identify the use of fake accounts for vote manipulation.
+
+
+To identify elections possibly influenced by a large number of fake accounts, we compute the ratio of such accounts (meeting both criteria simultaneously) participating in each election. The results indicate that these accounts never represent more than 6.7% of the votes. When scrutinizing the usernames and comments of these accounts in elections where they constitute between 4% and 6.7%, there is no evidence that these votes originate from the same person. They all appear legitimate.
+
+While we cannot definitively confirm the absence of fake accounts, our results suggest that creating fake accounts solely to vote once is not a widely practiced strategy. Their impact on overall election outcomes seems minimal. Bob is delighted with these results, as fairness is a value that matters to him.
+
+
+
+
+
 
 ## Hidden Structures: Communities and their Impact on RfA Elections in Wikipedia
 
@@ -111,7 +156,7 @@ For each community, let $p_i$ be the fraction of Wikipedians inside the communit
 
 With those communities we observe that 25.96% of the votes are intra-cluster, in stark contrast to the expected value of 7.52%. This difference strongly indicates a trend toward engaging more in elections for individuals with whom there has been an interaction at some point.
 
-To make it more general, we compute the numbers of votes from each community to every other community and normalize these values by the corresponding expected numbers of votes based on community sizes. The matrix presented here highlights the significance of votes within the same community, as these values consistently exceed those of inter-community voting.
+To make it more general, we compute the numbers of votes from each community to every other community and normalize these values by the corresponding expected numbers of votes based on community sizes. The matrix presented here highlights the significance of votes within the same community, as these values consistently exceed those of inter-community voting. For example, users in the "Military Aircraft" community are 8.82 times more likely to participate in the election of another community member compared to the random baseline.
 
 ![shades_of_blue](assets/img/shades_of_blue.png){: width="2000"}
 
@@ -124,9 +169,10 @@ To detect the presence of such behavior, we examine the ratio of positive votes 
 ![title](assets/img/graph_daniel.png)
 
 We can denote that for all the groups that have a self-loop, this latter is green. Half of the groups have this arrow. This brings evidence for intra-community favoritism. We also see clear signs of negative voting dynamics. The most telling is “Pop culture mix”. This community is mostly made of Pop Culture and People magazines topics. Some examples are “David Beckham”, “Britney Spears” and “Paris Hilton”. We can make the assumption that those topics are not seen as serious enough by the Wikipedia community or that its community may consist of more novice users. For that reason, we observe a consequent number of negative arrows pointing towards this community. Some votes also have a cultural influence. We observe “Balkans and Central Asia” voting positively towards “Russia and Eastern Europe”. And some votes open the door for interpretation. “Religion Debates and Controversies” not supporting “Youth Pop Culture” can be interpreted as a way for Religion to contest the society in which youngsters live. This already gives us an idea of the motivation behind votes.
+
 <img align="right" src="assets/img/bob_aussie.png" width=250 style="border:10px solid #FFFF">
 
-As an Australian, Bob is delighted with these results. Now, armed with the knowledge that he can anticipate strong support from his community, he also finds assurance in the absence of any indications of animosity between the Australian community and any other group.  
+As an Australian, Bob is delighted with these results. Now, armed with the knowledge that he can anticipate strong support from his community, he also finds assurance in the absence of any indications of animosity between the Australian community and any other group.
 
 
 # Conclusion
@@ -148,5 +194,6 @@ To further incentivize participation, we recommend offering rewards to users who
 To facilitate the voting process and ensure the meaningfulness of each vote, we propose accompanying each invitation with an explanatory note about the candidate. Drawing inspiration from Wikipedia's well-established [guide for voters](https://en.wikipedia.org/wiki/Wikipedia:Advice_for_RfA_voters), we suggest leveraging Wikipedia's resources to provide a concise summary along with various statistics on the candidate's contributions. This approach significantly reduces the effort required for voters to make informed decisions.
 
 By implementing these solutions, our goal is to diminish the influence of support based on existing connections or shared interests, promoting a more impartial and equitable voting process. Additionally, we anticipate that this approach will lead to increased voter turnout, thereby enhancing the overall fairness of the system.
+
 
 # References
