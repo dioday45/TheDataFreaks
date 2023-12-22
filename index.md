@@ -11,9 +11,9 @@ use-site-title: true
 # Background and motivation
 
 ![title](assets/img/ADA.png)
-Wikipedia, the world's largest online encyclopedia, relies on a community of dedicated contributors to maintain and improve its vast repository of knowledge. Admins (short for administrators) play a crucial role in this ecosystem by overseeing the platform, ensuring its integrity, and facilitating a collaborative and respectful environment for editors. The process through which individuals become administrators is known as the Request for Adminship (RfA). Adminship is not just a privilege but a responsibility, and those seeking this role are expected to have a deep understanding of Wikipedia policies, guidelines, and a history of constructive contributions. All the admins have the ability to delete pages, protect pages from editing, and block users, among other tools. Those tasks necessitate a high level of trust from the community, hence, the importance of robust votation in Wikipedia's administrative elections cannot be overstated. They need to ensure a fair and equitable system. A diverse voter base ensures a variety of perspectives, mitigating the risk of undue influence or bias. In short, the votation process is a crucial mechanism for upholding fairness, transparency, and community consensus.
+Wikipedia, the world's largest online encyclopedia, relies on a community of dedicated contributors to maintain and improve its vast repository of knowledge. Admins (short for administrators) play a crucial role in this ecosystem by overseeing the platform, ensuring its integrity, and facilitating a collaborative and respectful environment for editors. The process through which individuals become administrators is known as the Request for Adminship (RfA). Adminship is not just a privilege but a responsibility, and those seeking this role are expected to have a deep understanding of Wikipedia policies, guidelines, and a history of constructive contributions. All the admins have the ability to delete pages, protect pages from editing, and block users, among other tools. Those tasks necessitate a high level of trust from the community, hence, the importance of robust votation in Wikipedia cannot be overstated. They need to ensure a fair and equitable system. A diverse voter base ensures a variety of perspectives, mitigating the risk of undue influence or bias. In short, the votation process is a crucial mechanism for upholding fairness, transparency, and community consensus.
 
-In an ideal world, candidates should be driven by a commitment to actively engage in the governance structure of Wikipedia. On the other side, voters, like Bob, should have for objective to 
+In an ideal world, candidates should be driven by a commitment to actively engage in the governance structure of Wikipedia. On the other side, voters should have for objective to 
 ensure that candidates are selected based on their merit, experience, and dedication to the fundamental principles of Wikipedia. However, from 2003 to 2013, there was an **average of 53 votes** per election out of the millions of registered users[^1] allowed to vote. This low turnout raises questions about the fairness and integrity of the system.
 
 [^1]: Wikimedia, number of registered users 2003-2013, https://stats.wikimedia.org/#/en.wikipedia.org
@@ -28,7 +28,7 @@ Our aim is to investigate the factors influencing participation and identify the
 
 <img align="right" src="assets/img/bob.png" width=250>
 
-Before we dive into the data, let me introduce you to Bob. Bob is an avid Wikipedia user. Having spent countless hours contributing to Wikipedia articles, he is now considering applying to become admin. However, he's a careful observer who wants to maximize his chance of being elected. Hence, he wants to know more about the voting habits before applying.
+Before we dive into the data, let me introduce you to Bob. Bob is an avid Wikipedia user. Having spent countless hours contributing to Wikipedia articles, he is now considering applying to become admin. However, he is a careful observer who wants to maximize his chance of being elected. Hence, he wants to know more about the voting habits before applying.
 
 Throughout our data story, Bob will serve as our guide, asking important questions about the election process, voter motivations, and potential improvements. So, let's join Bob on his journey of exploration and discovery.
 
@@ -37,7 +37,7 @@ Throughout our data story, Bob will serve as our guide, asking important questio
 
 ## Wikipedia Requests for Adminship (Wiki-RfA)
 
-Our main dataset, the [Wiki-RfA](https://snap.stanford.edu/data/wiki-RfA.html)[^2], spans from 2003 to 2013, and includes a collection of 11,381 users involved in RfA processes, resulting in 189,004 unique voter/votee pairs and 198,275 votes. This dataset offers a detailed view of Wikipedia's community dynamics, reporting each vote, election outcome, and user comment.
+Our main dataset, the [Wiki-RfA](https://snap.stanford.edu/data/wiki-RfA.html)[^2], spans from 2003 to 2013, and includes a collection of 11,381 users involved in RfA processes, resulting in 189,004 unique voter/candidate pairs and 198,275 votes. This dataset offers a detailed view of Wikipedia's community dynamics, reporting each vote, election outcome, and user comment.
 
 [^2]: Robert West, Hristo S. Paskov, Jure Leskovec, and Christopher Potts: Exploiting Social Network Structure for Person-to-Person Sentiment Analysis. Transactions of the Association for Computational Linguistics, 2(Oct):297–310, 2014.
 
@@ -53,18 +53,18 @@ Our second dataset, the [Complete Wikipedia Edit History](https://snap.stanford.
 | Wikipedia Namespace            | Administrative procedures and pages | 3Gb   |
 | Wikipedia Namespace Talk Pages | Administrative discussion pages     | <1 GB |
 
-In this project, the focus was on the Main Namespace Revisions and User Talk Page Edits to track and analyze user interactions. The former enables us to consider interactions between users outside of the election process. We consider an interaction between two users as an edit from one user to another user’s talk page (a personal page used to discuss with other editors). Those interactions reflect direct, personal and conscious interactions. This allows us to link voters and candidates outside of the elections, to identify who has had interactions. The latter comprises the edits on different Wikipedia pages. From that, we can gather information on the centers of interest of the users.
+In this project, the focus is on the User Talk Page Edits and Main Namespace Revisions. The former enables us to consider interactions between users outside of the election process. We consider an interaction between two users as an edit from one user to another user’s talk page (a personal page used to discuss with other editors). Those interactions reflect direct, personal and conscious interactions. This allows us to link voters and candidates outside of the elections, to identify who has had interactions. The latter comprises the edits on different Wikipedia pages. From that, we can gather information on the centers of interest of the users.
 
 [^3]: J. Leskovec, D. Huttenlocher, J. Kleinberg. Governance in Social Media: A case study of the Wikipedia promotion process. AAAI International Conference on Weblogs and Social Media (ICWSM '10), 2010.
 
 
-# Datasets Exploratory Data Analysis
+# Exploratory Data Analysis
 Our dataset is not just a collection of numbers, it is a reflection of the motivations and actions of voters within the RfA process. As we want to dive into the complexity of voting behavior in RfA elections. We first question ourselves about the behavior of the voters. Do people vote a lot? Do they vote positively or negatively?
 First, we see here that we have a really important proportion of positive votes in our dataset.
 
 <iframe src="assets/html/vote_distrib.html" width="750px" height="550px" frameborder="0" position="relative">Genre plot</iframe>
 
-However, we see that the voting behavior of users is extremely imbalanced. We have an important part of the users who vote only once. The distribution has a large tail, some of the users voted 200, 400, 600 and even one voted 1200 times ! This phenomena is starting to interest Bob, as Bob is planning on running for an RfA he would like to know why so few people vote? 
+However, we see that the voting behaviors of users are extremely imbalanced. We have an important part of the users who vote only once. The distribution has a large tail, some of the users voted 200, 400, 600 and even one voted 1200 times! This phenomenon is starting to interest Bob, as Bob is planning on running for a RfA he would like to know why so few people vote.
 
 ![title](assets/img/number_of_votes_per_person.png)
 
@@ -73,7 +73,7 @@ We said before that the majority of votes are positive. Great! If the majority o
 
 <iframe src="assets/html/election_outcomes.html" width="750px" height="550px" frameborder="0" position="relative">Genre plot</iframe>
 
-Election outcomes are very well balanced between success and failure. By following the duration of 7 days for election, as indicated by [wikipedia RfA’s guide](https://en.wikipedia.org/wiki/Wikipedia:Requests_for_adminship#About_RfB), we obtain more unsuccessful elections than successful ones. Why? Actually elections only get successful when an important majority of the votes are positive, around 80%!
+Election outcomes are very well balanced between success and failure. By following the duration of 7 days for election, as indicated by [wikipedia RfA’s guide](https://en.wikipedia.org/wiki/Wikipedia:Requests_for_adminship), we obtain more unsuccessful elections than successful ones. Why? Actually elections only get successful when an important majority of the votes are positive, around 80%!
 Bob begins to feel disheartened as the majority of elections do not yield successful outcomes, many voters appear disengaged from the process, and to add to his challenges, Bob still needs to persuade a significant portion of the electorate.
 Here is some relief: what this plot shows is that, among the users who end up getting elected, most of them do it on their first election. However, assiduity can pay off as some wait as many as 6 elections before getting elected! 
 Wikipedia RfA is a lot about perseverance, 40% of the users who run for an election give up after an unsuccessful first election! So Bob is now quite relieved but still a question torments him : How can he influence the result of his election? Let’s dig into it!
@@ -87,9 +87,11 @@ We already saw that users don’t vote much and on average they participate in 1
 
 What drives people to take part in specific elections? 
 
-As our dataset contains only votes of election, it is not particularly straightforward to know what influences the voters not to vote. To address this, we create a balanced dataset by pairing (for a given election) a voter and a non-voter that have similar voting statistics. Then we conduct a logistic regression, incorporating two key features: the number of contacts from the voter who voted before him and a binary variable representing contact between the voter and the person running for election[^4]. 
-It turns out that the two features have coefficients XX for the first one and YY for the second one. The regression showed a pseudo R-squared of XX and a p-value of 0 for both our features. 
-This is an important breakthrough for us as we have here two major key players that drive the participation of users. We should hurry to advise Bob to engage with more people in order to have more voters who participate in his election.
+
+As our dataset contains only votes of election, it is not particularly straightforward to know what influences the voters not to vote. To address this, we create a balanced dataset by pairing (for a given election) a voter and a non-voter that have similar voting statistics. Then we conduct a logistic regression, incorporating two key features: the number of contacts from the voter who voted before him and the number of contacts between the voter and the person running for election[^4]. 
+It turns out that the two features have coefficients 0.89 for the first one and 1.75 for the second one and a p-value of 0 for both our features. 
+This is an important breakthrough for us as we have here two major key players that drive the participation of users. We should hurry to advise Bob to engage with more people in order to have more voters who participate in his election. 
+
 
 [^4]: Paper of Cabunducan, G. https://ieeexplore.ieee.org/document/5992657
 
@@ -99,15 +101,18 @@ A first intuition could be to say that interactions with users tend to influence
 
 ![title](assets/img/percentage_interactions.png)
 
-We now conduct a different logistic regression to predict the value of the vote using two different features. The initial pair of features corresponds to the number of contacts who voted positively for the election (before our user) and the number of contacts who voted negatively before him. The second feature is a binary feature that represents that a  communication exists between the candidate and the voter.  
-The two first features have coefficients XX for contacts with positive votes and XX for contacts with negative votes. The direct contact feature has a coefficient of YY. The regression showed a pseudo R-squared of XX and a p-value of 0 for all our features. 
-All the coefficients align with our anticipations. What stands out is the notable predictive power of the user’s one-hop neighborhood in determining vote values. Surprisingly, the presence of contacts who voted negatively exerts more influence than those who voted positively. This reaffirms our earlier recommendation to engage with more people.
+We now conduct a different logistic regression to predict the value of the vote using two different features. The initial pair of features corresponds to the number of contacts who voted positively for the election (before our user) and the number of contacts who voted negatively before him. The second feature is a binary feature that represents that a communication exists between the candidate and the voter.  
+The two first features have coefficients 0.17 for contacts with positive votes and -0.57 for contacts with negative votes. The direct contact feature has a coefficient of 0.73. The regression showed a p-value of 0 for all our features. 
+All the coefficients align with our anticipations. What stands out is that the presence of contacts who voted negatively exerts more influence than those who voted positively. This reaffirms our earlier recommendation to engage with more people.
+
+<img align="right" src="assets/img/bob_dark.png" width=250 style="border:10px solid #FFFF">
+
 
 Bob now has a few insights on what he can do to improve his chances. However, as ambitious as Bob is, he wants to find other things that can improve his chances. A friend of his told him that Charlie has been elected by creating fake accounts and voting for himself.
 
 Bob has gained some valuable insights into what he can do to improve his chances. However, fueled by his ambition, he wants to explore additional strategies that could boost his chances. A friend mentioned to him that Charlie secured an election by generating fake accounts and casting votes in his favor. He is now wondering whether such a practice is commonplace on Wikipedia.
 
-<img align="right" src="assets/img/bob_dark.png" width=250 style="border:10px solid #FFFF">
+
 
 This rumor raises great concerns about the election fairness. Indeed, a potential challenge to the fairness of elections is the use of fake accounts by candidates to artificially boost their support. This practice could be particularly effective given the low voter turnout. Not only does this undermine the fairness of the whole system, but it also casts doubt on the legitimacy of the entire election process. It is crucial to identify and address such malicious practices to ensure that meritocracy prevails, and every participant's voice carries equal weight.
 
