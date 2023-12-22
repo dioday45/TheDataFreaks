@@ -108,8 +108,6 @@ All the coefficients align with our anticipations. What stands out is that the p
 <img align="right" src="assets/img/bob_dark.png" width=250 style="border:10px solid #FFFF">
 
 
-Bob now has a few insights on what he can do to improve his chances. However, as ambitious as Bob is, he wants to find other things that can improve his chances. A friend of his told him that Charlie has been elected by creating fake accounts and voting for himself.
-
 Bob has gained some valuable insights into what he can do to improve his chances. However, fueled by his ambition, he wants to explore additional strategies that could boost his chances. A friend mentioned to him that Charlie secured an election by generating fake accounts and casting votes in his favor. He is now wondering whether such a practice is commonplace on Wikipedia.
 
 
