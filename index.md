@@ -66,12 +66,12 @@ First, we see here that we have a really important proportion of positive votes 
 
 However, we see that the voting behavior of users is extremely imbalanced. We have an important part of the users who vote only once. The distribution has a large tail, some of the users voted 200, 400, 600 and even one voted 1200 times ! This phenomena is starting to interest Bob, as Bob is planning on running for an RfA he would like to know why so few people vote? 
 
-![title](assets/img/nb_votes_dist.png)
+![title](assets/img/number_of_votes_per_person.png)
 
 Before answering Bob, we should first explore further analysis regarding the elections.
 We said before that the majority of votes are positive. Great! If the majority of votes are positive, the majority of elections are successful so Bob has a high chance of becoming an admin! Hum, hum …
 
-<iframe src="assets/html/nb_votes_outcome.html" width="750px" height="550px" frameborder="0" position="relative">Genre plot</iframe>
+<iframe src="assets/html/election_outcomes.html" width="750px" height="550px" frameborder="0" position="relative">Genre plot</iframe>
 
 Election outcomes are very well balanced between success and failure. By following the duration of 7 days for election, as indicated by [wikipedia RfA’s guide](https://en.wikipedia.org/wiki/Wikipedia:Requests_for_adminship#About_RfB), we obtain more unsuccessful elections than successful ones. Why? Actually elections only get successful when an important majority of the votes are positive, around 80%!
 Bob begins to feel disheartened as the majority of elections do not yield successful outcomes, many voters appear disengaged from the process, and to add to his challenges, Bob still needs to persuade a significant portion of the electorate.
@@ -97,8 +97,7 @@ What can influence the vote of a voter election?
 			
 A first intuition could be to say that interactions with users tend to influence the result of a vote as displayed by this graph, i.e the users with whom Bob interacts a lot will tend to vote positively in Bob’s interaction : 
 
-
-<iframe src="assets/html/percentage_interactions.html" width="750px" height="550px" frameborder="0" position="relative">Genre plot</iframe>
+![title](assets/img/percentage_interactions.png)
 
 We now conduct a different logistic regression to predict the value of the vote using two different features. The initial pair of features corresponds to the number of contacts who voted positively for the election (before our user) and the number of contacts who voted negatively before him. The second feature is a binary feature that represents that a  communication exists between the candidate and the voter.  
 The two first features have coefficients XX for contacts with positive votes and XX for contacts with negative votes. The direct contact feature has a coefficient of YY. The regression showed a pseudo R-squared of XX and a p-value of 0 for all our features. 
