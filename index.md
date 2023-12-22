@@ -116,11 +116,11 @@ This rumor raises great concerns about the election fairness. Indeed, a potentia
 
 To question the presence of fake accounts in the RfA election on Wikipedia, we filter the users of the dataset based on their votes and edits. Our primary focus was on identifying users exhibiting characteristics indicative of potential fraudulent activity.
 
-- The criteria for identifying potential fake accounts are:
+The criteria for identifying potential fake accounts are:
 - No edits
 - Single vote participation
 
-If a user creates multiple accounts to artificially inflate positive votes, it's probable that they won't invest time in making edits with each account before casting a vote. Additionally, the user is likely to abandon most of these accounts, leaving them with zero edits and just one vote. Therefore, these straightforward characteristics serve as effective indicators to identify the use of fake accounts for vote manipulation.
+If a user creates multiple accounts to artificially inflate positive votes, it is probable that they will not invest time in making edits with each account before casting a vote. Additionally, the user is likely to abandon most of these accounts, leaving them with zero edits and just one vote. Therefore, these straightforward characteristics serve as effective indicators to identify the use of fake accounts for vote manipulation.
 
 
 To identify elections possibly influenced by a large number of fake accounts, we compute the ratio of such accounts (meeting both criteria simultaneously) participating in each election. The results indicate that these accounts never represent more than 6.7% of the votes. When scrutinizing the usernames and comments of these accounts in elections where they constitute between 4% and 6.7%, there is no evidence that these votes originate from the same person. They all appear legitimate.
@@ -146,7 +146,7 @@ Commencing our analysis, we construct a graph illustrating interactions on perso
 
 ![community_graph](assets/img/community_graph.png)
 
-Now that we have identified 29 communities, analyzing the content edited by each community presents an exciting opportunity. By scrutinizing the content they engage with and the topics they choose to edit, we can gain a deeper understanding of what binds each community together. The goal is to dissect the content edited by each community and use this information to better understand the motivations of each vote. The following dropdown menu shows the 20 most edited pages for each community.
+Now that we have identified 29 communities, analyzing the content edited by each community presents an exciting opportunity. By inspecting the content they engage with and the topics they choose to edit, we can gain a deeper understanding of what binds each community together. The goal is to dissect the content edited by each community and use this information to better understand the motivations of each vote. The following dropdown menu shows the 20 most edited pages for each community.
 
 <iframe src="assets/html/menu.html" width="750px" height="650px" frameborder="0" position="relative">Genre plot</iframe>
 
