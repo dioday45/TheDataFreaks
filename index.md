@@ -71,7 +71,7 @@ However, we see that the voting behavior of users is extremely imbalanced. We ha
 Before answering Bob, we should first explore further analysis regarding the elections.
 We said before that the majority of votes are positive. Great! If the majority of votes are positive, the majority of elections are successful so Bob has a high chance of becoming an admin! Hum, hum …
 
-<iframe src="assets/html/election_outcome.html" width="750px" height="550px" frameborder="0" position="relative">Genre plot</iframe>
+<iframe src="assets/html/nb_votes_outcome.html" width="750px" height="550px" frameborder="0" position="relative">Genre plot</iframe>
 
 Election outcomes are very well balanced between success and failure. By following the duration of 7 days for election, as indicated by [wikipedia RfA’s guide](https://en.wikipedia.org/wiki/Wikipedia:Requests_for_adminship#About_RfB), we obtain more unsuccessful elections than successful ones. Why? Actually elections only get successful when an important majority of the votes are positive, around 80%!
 Bob begins to feel disheartened as the majority of elections do not yield successful outcomes, many voters appear disengaged from the process, and to add to his challenges, Bob still needs to persuade a significant portion of the electorate.
